@@ -1,0 +1,65 @@
+
+package obiekty.komputer;
+
+/**
+ *
+ * @author Kasia
+ */
+public class ObiektyKomputer {
+    
+    String nazwaKomputera = "MAC";
+    String systemOperacyjny = "IOS";
+    String dysk = "SSD";
+    int Ram = 16;
+    boolean szybkość = true;
+    String procesor = "Intel i5";
+    boolean kamera = true;
+    
+    public void drukuj() {
+        
+        System.out.println("Komputer: " + nazwaKomputera);
+        System.out.println("System Operacyjny : " + systemOperacyjny);
+        System.out.println("Dysk : " + dysk);
+        System.out.println("Ram : " + Ram);
+        System.out.println("Szybko się uruchamia? : " + szybkość);
+        System.out.println("Procesor : " + procesor);
+        System.out.println("Kamera : " + kamera);
+                
+}
+    
+    public void zmianaKomputera() {
+        nazwaKomputera = "Asus";
+        systemOperacyjny = "Windows 10";
+        procesor = "Intel i7";
+                 
+    }
+    
+    public void zmianaRam () {
+        int ram2 = Ram;
+        Ram = Ram + 8;
+    }
+    
+    public void zmianaKamery () {
+        kamera = false;
+    }
+    
+    public static void main(String[] args) {
+        
+        ObiektyKomputer komputerek = new ObiektyKomputer();
+        System.out.println("\nPierwszy komputer: \n");
+        komputerek.drukuj();
+        
+        komputerek.zmianaKomputera();
+        komputerek.zmianaRam();
+        System.out.println("\nDrugi komputer: \n");
+        komputerek.drukuj();
+        
+        ObiektyKomputer notebook = komputerek;
+        notebook.zmianaKamery();
+        System.out.println("\nNotebook\n");
+        notebook.drukuj();
+        
+        
+    }
+    
+}
