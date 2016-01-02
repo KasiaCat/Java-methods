@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    double M;
+    int T;
+    int X;
+
+    cin >> M;
+    cin >> T;
+    cin >> X;
+
+    float tip = (T*M)/100;
+    float tax = (X*M)/100;
+
+    double finalPrice = M + tip + tax;
+
+    cout.precision(2);
+    cout << "The final price of the meal is $" << finalPrice << ".";
+
+
+
+    return 0;
+}
