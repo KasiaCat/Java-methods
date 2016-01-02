@@ -1,0 +1,137 @@
+
+package car;
+
+/**
+ *
+ * @author Kasia
+ */
+public class Car {
+    // primitive datatypes below
+   int maXspeed = 100;
+   int miNspeed = 0;
+   
+   double weight = 4079;
+   boolean isTheCarOn = false;
+   char condition = 'A';
+   
+   String nameOfCar = "Katie";
+   //Reference datatype is String
+   
+   double maxLitrowBaku = 16;
+   double IleLitroPaliwaTerazMam = 8;
+   double cenaZaLitr = 5.15;
+   
+   int ileLudziwSamochodzie = 1;
+   
+   boolean czyJestszyberdach = false;
+   
+   double cenaPrzegladuTech = 760;
+   
+   //konstruktor
+   // public - kazdy moze stworzyc samochod 
+   public Car(int ZwyklaMaxSpeed, double Zwyklaweight, boolean OnCzyOff, double zwyklacena) {
+       maXspeed = ZwyklaMaxSpeed;
+       // nie wolno, na odwrot ZwyklaMinSpeed = miNspeed (bo wtedy 0 przypisze)
+       weight = Zwyklaweight;
+       isTheCarOn = OnCzyOff;
+       cenaPrzegladuTech = zwyklacena;
+       
+   }
+   
+   
+    public void drukujWartosci () {
+       
+       System.out.println("Maxymalna prędkość: " + maXspeed);
+       System.out.println("Minimalna prędkość: " + miNspeed);
+       System.out.println("Waga samochodu: " + weight);
+       System.out.println("Czy samochód jest włączony: " + isTheCarOn);
+       System.out.println("Stan: " + condition);
+       System.out.println("Imie samochodu: " + nameOfCar);
+       System.out.println("Ilosc osób w samochodzie: " + ileLudziwSamochodzie);
+       System.out.println("Szyberdach? " + czyJestszyberdach);
+       System.out.println("Cena za Przeglad Techniczny: " + cenaPrzegladuTech);
+       }
+   
+    public void damagedCar() {
+        condition = 'D';
+    }
+    
+    
+    public void zwiekszSzybkosc () {
+        miNspeed = maXspeed;
+        maXspeed = maXspeed + 1;
+    }
+    
+    
+    public void wejdzDoSamochodu() {
+        //ileLudziwSamochodzie = ileLudziwSamochodzie + 1;
+        ileLudziwSamochodzie++;
+    }
+    
+    public void wyjscZSamochodu() {
+        //ileLudziwSamochodzie = ileLudziwSamochodzie - 1;
+        ileLudziwSamochodzie--;
+    }
+    
+   
+    public double zaIleKMSkonczySiePaliwo() {
+        return IleLitroPaliwaTerazMam * cenaZaLitr;
+    }
+    
+    public double ileKMNaPelnymBaku() {
+        return maxLitrowBaku * cenaZaLitr;
+    }
+    
+    public void zmianaNazwy() {
+        nameOfCar = "Mary";
+    }
+            
+   /*
+    public static void main(String[] args) {
+        
+        Car audi = new Car (); //glowny obiekt - parent
+        System.out.println("Samochód głowny");
+        audi.drukujWartosci();
+        audi.zwiekszSzybkosc();
+        audi.zmianaNazwy();
+        System.out.println("Po wymianie silnika: ");
+        audi.drukujWartosci();
+        
+        
+        //reference datatypes
+        Car samochodKasi = audi; //reference type, dziecko dziedziczy
+        
+        audi.damagedCar();
+        System.out.println("Samochód Kasi");
+        samochodKasi.drukujWartosci();
+*/
+    
+    public static void main(String[] args) {
+        Car prezentUrodzinowy = new Car(300, 5800.978, false, 150);
+        System.out.println("Parametry samochodu v1:\n ");
+        prezentUrodzinowy.drukujWartosci();
+        
+        prezentUrodzinowy.wejdzDoSamochodu();
+        prezentUrodzinowy.wejdzDoSamochodu();
+        prezentUrodzinowy.wejdzDoSamochodu();
+        System.out.println("\nIle KM mozesz jeszcze przejechac: " + prezentUrodzinowy.zaIleKMSkonczySiePaliwo());
+        System.out.println("Maxymalna ilosc mil: " + prezentUrodzinowy.ileKMNaPelnymBaku());
+        
+        System.out.println("\nParametry samochodu v2:\n ");
+        prezentUrodzinowy.drukujWartosci();
+        
+        prezentUrodzinowy.wyjscZSamochodu();
+        
+        System.out.println("\nParametry samochodu v3:\n ");
+        prezentUrodzinowy.drukujWartosci();
+        
+        
+        System.out.println("\nSamochód zastępczy:\n ");
+        Car samochodZastepczy = new Car(450, 3209.67, true, 1600);
+        samochodZastepczy.drukujWartosci();
+        
+        
+        
+    }
+    
+}
