@@ -46,7 +46,48 @@ public class Car {
        
    }
    
+   //Get and Set (getchar() in C++)
+   //this oznacza - ten obiekt, odwołuje się do konkretnego obiektu
+   //który ma metody, wartości  - jak maxspeed, minspeed etc.
    
+   public int getmaXspeed() { 
+       return this.maXspeed;
+   }
+   
+   public void setmaXspeed(int newmaXspeed) { //int new....- to parametr
+       this.maXspeed = newmaXspeed;
+               //zmieniamy liczbe pasazerow w tym samochodzie
+               //nie w kazdym. TYLKO W TYM - samochod Kasi
+   }
+   
+    
+   public void zwiekszSzybkosc () {
+        setmaXspeed(getmaXspeed() + 10 );
+    }
+   
+    /*
+    public void zwiekszSzybkosc () {
+        miNspeed = maXspeed;
+        maXspeed = maXspeed + 1;
+    }
+    */
+   
+   public int getmiNspeed() {
+       return this.miNspeed;
+   }
+   
+   public double getWeight() {
+       return this.weight;
+   }
+   
+   public boolean getisTheCarOn() {
+       return this.isTheCarOn;
+   }
+   
+   public String getnameOfCar() {
+       return this.nameOfCar;
+   }
+  
     public void drukujWartosci () {
        
        System.out.println("Maxymalna prędkość: " + maXspeed);
@@ -75,13 +116,8 @@ public class Car {
             System.out.println("Możesz jeszcze dodać gazu!");
         }
     }
-    
-    public void zwiekszSzybkosc () {
-        miNspeed = maXspeed;
-        maXspeed = maXspeed + 1;
-    }
-    
-    
+   
+   
     public void wejdzDoSamochodu() {
         //ileLudziwSamochodzie = ileLudziwSamochodzie + 1;
         //ileLudziwSamochodzie++;
