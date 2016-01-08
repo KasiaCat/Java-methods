@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int N = scanner.nextInt();
+
+    char[] schody = new char[N];
+    for (int i = 0; i < N; i++) {
+        schody[i] = ' ';
+    }
+
+    for (int i = 1; i <= N; i++) {
+        schody[N - i] = '#';
+        System.out.println(new String(schody));
+    }
+}
+
+}
