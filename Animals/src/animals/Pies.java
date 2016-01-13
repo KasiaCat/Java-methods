@@ -1,7 +1,4 @@
 package animals;
-/**
- * @author Kasia
- */
 
 public class Pies extends Animals {
     
@@ -12,6 +9,14 @@ public class Pies extends Animals {
     }
     
     //metody
+    
+    public void eat() {
+       System.out.println("Pies pije mleko"); 
+    }
+    //overwrite the method
+    public void sen() {
+        System.out.println("Pies śpi");
+    }
     
     public void szczekanie() {
         System.out.println("Pies zaszczekał.");

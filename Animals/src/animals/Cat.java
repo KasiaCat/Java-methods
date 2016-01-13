@@ -1,8 +1,4 @@
 package animals;
-/**
- * @author Kasia
- */
-
 //extends ---> pozwala na dodanie klasy Rodzic
 
 //klasa -> dziecko
@@ -10,10 +6,16 @@ public class Cat extends Animals {
     
     //Konstruktor
     public Cat() {
-        //najpierw musimy wywołać konstruktor rodzica, do tego
-        //używamy funkcji super()
         super(6);
         System.out.println("Kupiłam kota.");
+    }
+    //overwrite the method eat
+    public void eat() {
+       System.out.println("Kot pije mleko"); 
+    }
+    
+    public void sen() {
+        System.out.println("Kot śpi");
     }
     
     //metody
