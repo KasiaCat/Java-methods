@@ -1,0 +1,2 @@
+klasy.pkgabstract.Solution
+klasy.pkgabstract.KlasyAbstract
