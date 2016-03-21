@@ -1,7 +1,0 @@
-var tablica_asoc = []
-tablica_asoc[1] = 'Kowalski';
-tablica_asoc[3] = 'Nowak';
-tablica_asoc[4] = 'Kronung';
-
-var nazwisko = prompt();
-console.log(tablica_asoc.indexOf(nazwisko));

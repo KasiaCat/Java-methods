@@ -1,6 +1,0 @@
-var hotel_u_jacka = {
-    "rooms": 10,
-    "stars": 3,
-    "walls_color": "blue",
-    "can_receive_mail": true
-};

@@ -1,9 +1,0 @@
-var menu = [];
-menu["lazania"] = 12.99;
-menu["jajecznica"] = 7.50;
-menu["homar"] = 24.99;
-menu["pomidorowa"] = 10;
-
-for ( var dish in menu ){
-  console.log(dish + " kosztuje " + menu[dish] + " PLN");
-}
