@@ -1,0 +1,10 @@
+unction MyClass(a_val, b_val) {
+   this.a = a_val; //właściwość "a" obiektu utworzonego z tej klasy będzie miała wartość a_val
+   this.b = b_val; //właściwość "b" obiektu utworzonego z tej klasy będzie miała wartość b_val
+   this.c = function(){
+     console.log("Moja wartość a to: " + this.a );
+   };
+ }
+ 
+ var my_object = new MyClass("Hello, World!", 1);
+ my_object.c();

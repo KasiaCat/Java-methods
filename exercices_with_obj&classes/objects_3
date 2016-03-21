@@ -1,0 +1,20 @@
+var hotel_u_jacka = {
+    "rooms" : 10,
+    "stars" : 3,
+    "walls_color" : "blue",
+    "can_receive_mail" : true,
+    "free_rooms": 10,
+    
+    "guestArrive": function() {
+        if (this.free_rooms > 0)
+        {
+                this.free_rooms -= 1;
+                return true;
+        } else
+            return false;
+    },
+    
+    "guestLeave": function() {
+        this.free_rooms += 1;
+    }
+};

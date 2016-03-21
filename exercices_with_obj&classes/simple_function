@@ -1,0 +1,10 @@
+function showGreet(firstName, isWoman){
+  if (isWoman){
+    console.log("Witamy Panią " + firstName);
+  } else {
+    console.log("Witamy Pana " + firstName);
+  }
+}
+
+showGreet('Anna', true);
+showGreet('Jakub', false);

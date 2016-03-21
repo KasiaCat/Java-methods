@@ -1,0 +1,9 @@
+var guests = [];
+guests["Kowalski"] = 1;
+guests["Nowak"] = 2;
+guests["Bravo"] = 8;
+guests["Nowakowska"] = 10;
+
+for (var nazwisko in guests) {
+    console.log(nazwisko + " w pokoju " + guests[nazwisko]);
+}

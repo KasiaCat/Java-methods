@@ -1,0 +1,17 @@
+function Hotel(hotel_name, stars, rooms) {
+   this.name  = hotel_name;
+   this.stars = stars;
+   this.rooms = rooms;
+ 
+   this.showInfo = function(){
+     console.log("Hotel " + this.name + " ma " + this.stars + " gwiazdek i " + this.rooms + " pokoi.");
+   };
+ }
+ 
+ var hotel1 = new Hotel("Hotel u Jacka", 3, 10);
+ var hotel2 = new Hotel("Jacek2", 3, 5);
+ var hotel3 = new Hotel("Grand Budapest Hotel", 5, 25);
+ 
+ hotel1.showInfo();
+ hotel2.showInfo();
+ hotel3.showInfo();

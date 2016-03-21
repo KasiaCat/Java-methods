@@ -1,0 +1,10 @@
+var rooms_free = [true, false, false, true, false, true, false, false, true, true];
+
+for (var i = 0; i < 10; i++)
+{
+    var numer_pokoju = i + 1;
+    if (rooms_free[i] === true)
+    {
+        console.log("Pokój " + numer_pokoju + " jest wolny.");
+    }
+}

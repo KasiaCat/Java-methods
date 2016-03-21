@@ -1,0 +1,25 @@
+var free_rooms = [1, 2, 5, 6, 9];
+
+function isRoomFree(room_number){
+    if(room_number == 1 || room_number == 2 || room_number == 5 || 
+    room_number == 6 || room_number == 9)
+        return true;
+}
+
+function showIsRoomFree(room_number){
+  if (isRoomFree(room_number)){
+    console.log("Pokój " + room_number + " wolny.");
+  } else {
+    console.log("Pokój " + room_number + " zajęty.");
+  }
+}
+
+showIsRoomFree(2);
+showIsRoomFree(3);
+showIsRoomFree(4);
+showIsRoomFree(5);
+
+
+
+
+
