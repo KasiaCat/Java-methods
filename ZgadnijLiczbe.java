@@ -12,7 +12,6 @@ public class ZgadnijLiczbe {
     int max;
     int ile;
     Scanner scanner = new Scanner(System.in);
-    //Scanner działa jak cin, pobiera nasza liczbe
 
     //konstruktor
     public ZgadnijLiczbe() {
@@ -56,18 +55,6 @@ public class ZgadnijLiczbe {
                 ". Wpisz liczbę.");
         grawZgadywanie.Gra();
         
-        
-        /*
-        jakDuzaJestMojaLiczba(78);
-        jakDuzaJestMojaLiczba(5);
-        jakDuzaJestMojaLiczba(0);
-        jakDuzaJestMojaLiczba(11);
-        jakDuzaJestMojaLiczba(99);
-        jakDuzaJestMojaLiczba(64);
-        jakDuzaJestMojaLiczba(144);
-        jakDuzaJestMojaLiczba(675);
-        jakDuzaJestMojaLiczba(1);
-         */
 
     }
 
