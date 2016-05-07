@@ -5,24 +5,8 @@ import java.util.Scanner;
 
 public class TABPOM {
     double suma = 0, srednia = 0;
-    int ile;
-    
-    //konstruktor
-    public TABPOM(int i) {
-        this.ile = i;
-    }
-    
-    public int getile() {
-        return ile;
-    }
-    
-    public void setIle(int i) {
-        this.ile = i;
-    }
-
-
-    public void licz() {
-        double [] tab = new double[ile];
+ 
+    public double licz(double [] tab) {
         
         for (int i = 0; i < tab.length; i++) {
             System.out.println("Podawaj liczby: ");
@@ -39,15 +23,8 @@ public class TABPOM {
             System.out.println("suma: " + suma);
             
         }
-        
             srednia = suma/tab.length;
             System.out.println("srednia: " + srednia);
-        
-        
-        
-        
+            return srednia;
     }
-    
-    
-    
 }

@@ -12,9 +12,10 @@ public class TAB {
         
         System.out.println("Podaj rozmiar tablicy: ");
         ile_liczb = s.nextInt();
+        double [] tab = new double[ile_liczb];
         
-        TABPOM nowa = new TABPOM(ile_liczb);
-        nowa.licz();
+        TABPOM nowa = new TABPOM();
+        nowa.licz(tab);
         
         
     }
